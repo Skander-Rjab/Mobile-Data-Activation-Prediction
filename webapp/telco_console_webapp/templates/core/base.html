@@ -1,0 +1,50 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}Telco Console{% endblock %} · Data Activation Forecasting</title>
+  <meta name="description" content="Predicting next-month mobile data package activation across 30,000 customers, with two live-comparable ML models, business analysis, and Power BI reporting.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 16 16%22><rect width=%2216%22 height=%2216%22 rx=%223%22 fill=%22%230a0f1c%22/><rect x=%222%22 y=%229%22 width=%222.4%22 height=%225%22 fill=%22%2335d0ba%22/><rect x=%225.5%22 y=%226.5%22 width=%222.4%22 height=%227.5%22 fill=%22%2335d0ba%22/><rect x=%229%22 y=%224%22 width=%222.4%22 height=%2210%22 fill=%22%2335d0ba%22/><rect x=%2212.5%22 y=%221.5%22 width=%222.4%22 height=%2212.5%22 fill=%22%2335d0ba%22/></svg>">
+  <link rel="stylesheet" href="{% static 'css/main.css' %}">
+  <link rel="stylesheet" href="{% static 'css/pages.css' %}">
+</head>
+<body>
+  <nav class="topnav">
+    <div class="topnav-inner">
+      <a href="/" class="brand">
+        <span class="signal-mark"><i></i><i></i><i></i><i></i></span>
+        <span>
+          Telco Console
+          <small>MNT_FORFAIT_DATA forecasting</small>
+        </span>
+      </a>
+      <div class="navlinks">
+        <a href="/" class="{% block nav_home %}{% endblock %}">Overview</a>
+        <a href="/data/" class="{% block nav_data %}{% endblock %}">Data Explorer</a>
+        <a href="/analysis/" class="{% block nav_analysis %}{% endblock %}">Business Analysis</a>
+        <a href="/reports/" class="{% block nav_reports %}{% endblock %}">Reports</a>
+        <a href="/models/" class="{% block nav_models %}{% endblock %}">Models</a>
+        <a href="/predict/" class="{% block nav_predict %}{% endblock %}">Predict</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer>
+    <div class="shell flex justify-between items-center" style="flex-wrap: wrap; gap: 12px;">
+      <div class="flex items-center gap-8">
+        <span class="signal-mark" style="height: 12px;"><i></i><i></i><i></i><i></i></span>
+        Telco Console — built on 30,000 customers, two trained models, live predictions.
+      </div>
+      <div class="mono" style="font-size: 12px;">Django + DRF + TypeScript/React</div>
+    </div>
+  </footer>
+
+  <script src="{% static 'js/bundle.js' %}"></script>
+</body>
+</html>

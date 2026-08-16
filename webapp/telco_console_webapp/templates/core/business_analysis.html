@@ -1,0 +1,17 @@
+{% extends "core/base.html" %}
+{% block title %}Business Analysis{% endblock %}
+{% block nav_analysis %}active{% endblock %}
+
+{% block content %}
+<div class="page-header shell">
+  <div class="eyebrow"><span class="signal-mark" style="height:12px;"><i></i><i></i><i></i><i></i></span> Precomputed from the live customer table</div>
+  <h1>Business Analysis</h1>
+  <p>What actually drives next-month data activation — segment by segment, backed by the same aggregates powering the Reports page and the models' feature importance.</p>
+</div>
+
+<section class="block">
+  <div class="shell">
+    <div id="island-business-analysis"></div>
+  </div>
+</section>
+{% endblock %}

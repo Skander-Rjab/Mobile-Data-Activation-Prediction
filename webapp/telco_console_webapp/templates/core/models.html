@@ -1,0 +1,17 @@
+{% extends "core/base.html" %}
+{% block title %}Models{% endblock %}
+{% block nav_models %}active{% endblock %}
+
+{% block content %}
+<div class="page-header shell">
+  <div class="eyebrow"><span class="signal-mark" style="height:12px;"><i></i><i></i><i></i><i></i></span> Trained on 24,000 · tested on 6,000</div>
+  <h1>Model Comparison</h1>
+  <p>Two genuinely different approaches to the same zero-inflated target: a single-stage Tweedie-loss gradient booster, and a two-stage classifier + regressor hurdle model. Real metrics from the held-out test set, not estimates.</p>
+</div>
+
+<section class="block">
+  <div class="shell">
+    <div id="island-models"></div>
+  </div>
+</section>
+{% endblock %}

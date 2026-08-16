@@ -1,0 +1,56 @@
+{% extends "core/base.html" %}
+{% block title %}Overview{% endblock %}
+{% block nav_home %}active{% endblock %}
+
+{% block content %}
+<div class="shell">
+  <div id="island-home-hero"></div>
+</div>
+
+<section class="block">
+  <div class="shell">
+    <div class="section-title">Base at a glance</div>
+    <div class="section-sub">Live, recomputed from the current customer table.</div>
+    <div id="island-home-kpis"></div>
+  </div>
+</section>
+
+<section class="block">
+  <div class="shell">
+    <div class="section-title">Four ways into the data</div>
+    <div class="section-sub">Everything here runs against the real trained pipelines and the real 30,000-row dataset — nothing is mocked.</div>
+    <div class="feature-cards">
+      <a href="/data/" class="card feature-card">
+        <div class="feature-icon" style="background: rgba(53,208,186,0.14); color: var(--signal);">◇</div>
+        <h4>Data Explorer</h4>
+        <p>Browse, filter, and search all 30,000 customers by region, device generation, plan, and predicted activation — sortable, paginated, with a full profile drawer.</p>
+      </a>
+      <a href="/analysis/" class="card feature-card">
+        <div class="feature-icon" style="background: rgba(245,165,36,0.14); color: var(--amber);">▤</div>
+        <h4>Business Analysis</h4>
+        <p>Why activation happens: ARPU tiers, device generation, region, tenure, and traffic status, each broken down against the real activation rate.</p>
+      </a>
+      <a href="/reports/" class="card feature-card">
+        <div class="feature-icon" style="background: rgba(139,124,246,0.14); color: var(--violet);">▦</div>
+        <h4>Power BI Reports</h4>
+        <p>The two-page executive report, embeddable directly — with a live native fallback dashboard built from the same data when no embed URL is set.</p>
+      </a>
+      <a href="/models/" class="card feature-card">
+        <div class="feature-icon" style="background: rgba(255,107,107,0.14); color: var(--coral);">◆</div>
+        <h4>Model Comparison</h4>
+        <p>Tweedie LightGBM vs. a two-stage Random Forest hurdle model — head-to-head metrics and feature importance for each.</p>
+      </a>
+      <a href="/predict/" class="card feature-card">
+        <div class="feature-icon" style="background: rgba(53,208,186,0.14); color: var(--signal);">▶</div>
+        <h4>Live Prediction</h4>
+        <p>Build a hypothetical customer or pull a real one and watch both models score them in real time as you adjust inputs.</p>
+      </a>
+      <div class="card feature-card" style="opacity: 0.6;">
+        <div class="feature-icon" style="background: rgba(111,125,153,0.14); color: var(--text-muted);">i</div>
+        <h4>About this build</h4>
+        <p>Django REST Framework API, SQLite-backed customer table, scikit-learn/LightGBM pipelines, TypeScript + React + Recharts frontend.</p>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

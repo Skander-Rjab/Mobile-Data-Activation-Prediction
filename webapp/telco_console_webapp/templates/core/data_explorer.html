@@ -1,0 +1,17 @@
+{% extends "core/base.html" %}
+{% block title %}Data Explorer{% endblock %}
+{% block nav_data %}active{% endblock %}
+
+{% block content %}
+<div class="page-header shell">
+  <div class="eyebrow"><span class="signal-mark" style="height:12px;"><i></i><i></i><i></i><i></i></span> 30,000 customers</div>
+  <h1>Data Explorer</h1>
+  <p>Every customer in the training set, cleaned and feature-engineered, browsable in real time. Filter by region, device, or status, search by ID, sort any column, and open a full profile to re-run a live prediction.</p>
+</div>
+
+<section class="block">
+  <div class="shell">
+    <div id="island-data-explorer"></div>
+  </div>
+</section>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends "core/base.html" %}
+{% block title %}Predict{% endblock %}
+{% block nav_predict %}active{% endblock %}
+
+{% block content %}
+<div class="page-header shell">
+  <div class="eyebrow"><span class="signal-mark pulse" style="height:12px;"><i></i><i></i><i></i><i></i></span> Live inference, both models</div>
+  <h1>Predict</h1>
+  <p>Build a hypothetical customer, or pull a real one from the base, and watch both trained pipelines score them live as you move the sliders.</p>
+</div>
+
+<section class="block">
+  <div class="shell">
+    <div id="island-predict"></div>
+  </div>
+</section>
+{% endblock %}

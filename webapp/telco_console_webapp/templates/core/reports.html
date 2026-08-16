@@ -1,0 +1,17 @@
+{% extends "core/base.html" %}
+{% block title %}Reports{% endblock %}
+{% block nav_reports %}active{% endblock %}
+
+{% block content %}
+<div class="page-header shell">
+  <div class="eyebrow"><span class="signal-mark" style="height:12px;"><i></i><i></i><i></i><i></i></span> Two-page executive report</div>
+  <h1>Power BI Reports</h1>
+  <p>The two-page Power BI report, embedded directly. Drop a "Publish to web" or Power BI Embedded URL into settings and it renders here — until then, a native dashboard built from the same live data fills in.</p>
+</div>
+
+<section class="block">
+  <div class="shell">
+    <div id="island-reports"></div>
+  </div>
+</section>
+{% endblock %}
